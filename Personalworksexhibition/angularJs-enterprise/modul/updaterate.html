@@ -1,0 +1,110 @@
+<div class="container update-rate">
+        <div class="row">
+            <div class="col-md-2 col-xs-12 list-div">
+                <ul>
+                    <li><a  href="index.html#/depositlist">Share transaction</a></li>
+                    <li><a class="second-font" href="index.html#/depositlist">In treatment</a></li>
+                    <li><a class="second-font" href="index.html#/depositlist">Finish</a></li>
+                    <li><a href="index.html#/updaterate" class="active">Update information</a></li>
+                    <li><a class="second-font">DepositRate:<i>{{bossdata.depositRate}}%</i></a></li>
+                    <li><a class="second-font">DrawRate:<i>{{bossdata.drawRate}}%</i></a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-10 right-box col-xs-12">
+                <form>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-sm-2 col-xs-2">UserName</div><div class="col-sm-10 col-xs-10" ><span ng-module="bossinfo.realname">{{bossdata.realname}}</span></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-sm-2 col-xs-2"> Address</div>
+                            <div class="col-sm-10 col-xs-10"><span ng-model="bossinfo.adress">{{bossdata.contactAddress}}</span></div>
+                         </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-sm-2 col-xs-2"><span> Single state</span></div>
+                            <div class="col-md-10 col-xs-10">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inlineCheckbox1" value="1" style="position: relative" ng-model="depositstate"> &nbsp;&nbsp;&nbsp;&nbsp;Shared recharge
+                                </label>
+                                <label class="checkbox-inline" >
+                                    <input type="checkbox" id="inlineCheckbox2" value="1" style="position: relative" ng-model="drawstate">&nbsp;&nbsp;&nbsp;&nbsp; Share mention now
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                                    <div class=" choicecss">
+                                        <div class="col-sm-2 col-xs-2"><span>Support account</span></div>
+                                        <div class="col-sm-10 col-xs-10" >
+
+                                            <span id="cardnum" ng-model="bossinfo.supportAccount">
+
+
+                                            </span>
+                                        </div>
+                                    </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+
+                        <div class=" choicecss">
+                        <div class="col-sm-2 col-xs-2"><span>urrency</span></div>
+                        <div class="col-sm-10 col-xs-10">
+
+                                            <span id="cardbi" ng-model="bossinfo.supportCurrency"> </span>
+                        </div>
+                    </div>
+                            </div>
+                        </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <span for="inputEmail3" class="col-sm-2 control-label">DepositRate(%)</span>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="depositid" placeholder="请输入充值手续费率" ng-model="bossinfo.depositRate" value="{{depositRate}}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <span for="inputPassword3" class="col-sm-2 control-label">DrawRate(%)</span>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="drawid" placeholder="请输入提现手续费率" ng-model="bossinfo.drawRate"  value="{{drawRate}}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                        <span for="inputPassword3" class="col-sm-2 control-label">Contect</span>
+                        <div class="col-sm-10">
+                            <p>Type<span style="margin-left: 20px;">{{bossinfo.type}}</span></p>
+                            <input type="text" class="form-control" id="inputPassword4" placeholder="{{bossinfo.facebook}}" ng-model="bossinfo.facebook" value="{{bossinfo.facebook}}">
+                        </div>
+                        <span for="inputPassword3" class="col-sm-2 control-label"></span>
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 btn-class">
+                        <p><a class="btn  btn-default" ng-click="updateBossinfofun()">Confirm modification</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>

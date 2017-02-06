@@ -1,0 +1,190 @@
+<div class="container orderdetail">
+        <div class="row">
+            <div class="col-md-2 list-div">
+
+                <ul>
+                    <li><a class="active" href="index.html#/depositlist">Share transaction</a></li>
+                    <li><a class="second-font" href="index.html#/depositlist">In treatment</a></li>
+                    <li><a class="second-font" href="index.html#/depositlist">Finish</a></li>
+                    <li><a href="index.html#/updaterate">Update information</a></li>
+                    <li><a class="second-font">DepositRate:<i>{{bossdata.depositRate}}%</i></a></li>
+                    <li><a class="second-font">DrawRate:<i>{{bossdata.drawRate}}%</i></a></li>
+                </ul>
+
+            </div>
+            <div class="col-md-10 detail-box">
+                <div class="row top-font">
+                    <div class="col-md-6 col-xs-6">
+                        <p class="order-font">OrderID:<i>{{depositdetial.id}}</i></p>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <p class="time-font">Time:{{depositdetial.createAt |date :'yyyy-mm-dd hh:ss'}}</p>
+                    </div>
+                </div>
+
+
+                <div class="row top-font">
+                    <div class="col-md-6 col-xs-6">
+                        <p>UserName:{{depositdetial.userNick}}</p>
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <p>Order amount:{{depositdetial.amount}}<i>{{depositdetial.currency}}</i></p>
+                    </div>
+                </div>
+
+                <div class="row step-font">
+                        <div class="col-md-12 step-class">
+                            <ul class="steps" ng-if="depositdetial.orderState!=6">
+
+
+                                <li  ng-repeat="step in steplist"   class="active" ng-show="step.finish">{{step.msg}}</li>
+                                <li  ng-repeat="step in steplist"   ng-show="!step.finish">{{step.msg}}</li>
+
+                                <div  ng-show="step.finish"  ng-if="steplist.length>6" style="font-size: 24px;color: #f0ad4e">The operation, please operate in app <p><button ng-click="downapp()">app down</button></p></div>
+                                <div  ng-show="!step.finish"   ng-if="steplist.length>6" ><span style="font-size: 24px;color: #f0ad4e">The operation, please operate in app </span><p><button class="btn btn-success" ng-click="downapp()">app down</button></p></div>
+
+
+                            </ul>
+                            <ul class="steps" ng-if="depositdetial.orderState==6">
+
+                                <span style="font-size: 24px;color: #f0ad4e">
+                                 Order has been cancelled
+                                </span>
+                            </ul>
+                        </div>
+                        </p>
+                </div>
+
+
+                <div class="row">
+                    <div class="pull-right">
+
+                        <div class="step1 stepclass" ng-if="depositdetial.orderState!=6">
+                            <a class="btn btn-default "  ng-click="confirmOrdersuccessfun()">Confirmation of orders</a>
+                            <a class="btn btn-default " ng-click="confirmOrderfailfun()">Reject the order</a>
+                        </div>
+                        <div class="step2 stepclass">
+                            <a class="btn btn-default  " ng-click="showFrom()">Pay</a>
+                        </div>
+                        <div class="step3 stepclass">
+
+                        </div>
+                        <div class="step4 stepclass">
+                            <a class="btn btn-default step3 " ng-click="confirmOrdersavefun()">Confirm</a>
+                        </div>
+                        <div class="step5 stepclass">
+
+                        </div>
+                        <div class="step6 stepclass">
+                            <a class="btn btn-default step6 stepclass" ng-click="downapp()">Chat</a>
+                        </div>
+
+
+
+                        <div id="showid"  style="display: none" >
+
+                            <style>
+                                .col-md-7,.col-md-5{ padding: 0px;}
+                                .confirm{text-align: center}
+                                #showid .form-group{height: 40px;}
+                                #showid .form-group .col-md-4{line-height: 40px;}
+                                #showid .form-group .col-md-5{line-height: 26px;}
+                                #showid .form-group .col-md-5 button{float: right}
+                            </style>
+
+                            <div ng-if="user.openMobileCode==1 && user.openGoogleCode==1" style="margin-top: 30px;">
+
+                                <div class="form-group">
+
+                                        <div class="col-md-4">
+                                            <span for="inputPassword3" class=" control-label">Password</span>
+
+                                        </div>
+                                        <div class="col-md-8">
+                                            <input type="password" class="form-control"  placeholder="Please input a password" ng-model="pay.tradePwd"  >
+                                        </div>
+
+                                </div>
+
+
+
+                                <div class="col-md-12 confirm"><button ng-click="payOrderfun()">Confirm payment</button></div>
+                            </div>
+
+                            <div ng-if="user.openMobileCode==2">
+
+                                <div class="form-group">
+
+                                    <div class="col-md-4">
+                                        <span for="inputPassword3" class=" control-label">Password</span>
+
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="password" class="form-control"  placeholder="Please input a password" ng-model="pay.tradePwd"  >
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <div class="col-md-4">
+                                        <span for="inputPassword3" class=" control-label">SMS verification code</span>
+
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="col-md-7"><input type="text" class="form-control"  placeholder="Please enter SMS verification code" ng-model="pay.mobileCode"  ></div>
+                                        <div class="col-md-5"> <button ng-click="sendCodefun()">SMS verification code</button> </div>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="col-md-12 confirm"><button ng-click="payOrdercodefun()">Confirm payment</button></div>
+                            </div>
+
+                            <div ng-if="user.openGoogleCode==2">
+
+                                <div class="form-group">
+
+                                    <div class="col-md-4">
+                                        <span for="inputPassword3" class=" control-label">Password</span>
+
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="password" class="form-control"  placeholder="Please input a password" ng-model="pay.tradePwd"  >
+                                    </div>
+
+                                </div>
+
+                                <div class="form-group">
+
+                                    <div class="col-md-4">
+                                        <span for="inputPassword3" class=" control-label">Google Code</span>
+
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control"  placeholder="Please input google code" ng-model="pay.mobileCode"  >
+
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="col-md-12 confirm"><button ng-click="payOrdercodefun()">Confirm payment</button></div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>

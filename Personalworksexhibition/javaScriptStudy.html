@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+    <script >
+        var num='sdf';
+        function a() {
+            var num='sdf1';
+            function b(){
+                var num='sdf2';
+                console.log(num)
+            }
+            b();
+        }
+        a();
+
+        function pro(){};
+        pro.prototype.name="hello word";
+        var b=new pro();
+        console.log(b.name);
+    </script>
+
+</html>

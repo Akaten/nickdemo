@@ -1,0 +1,86 @@
+<div class="container order-index">
+        <div class="col-md-12 order-title"></div>
+
+        <div class="row">
+            <div class="col-md-2 list-div">
+                <ul>
+                    <li><a class="active" href="index.html#/depositlist">Share transaction</a></li>
+                    <li><a class="second-font" ng-click="searchDrawstatefun(2)">In treatment</a></li>
+                    <li><a class="second-font" ng-click="searchDrawstatefun(1)">Finish</a></li>
+                    <li><a href="index.html#/updaterate">Update information</a></li>
+                    <li><a class="second-font">DepositRate:<i>{{bossdata.depositRate}}%</i></a></li>
+                    <li><a class="second-font">DrawRate:<i>{{bossdata.drawRate}}%</i></a></li>
+                </ul>
+            </div>
+            <div class="col-md-10 order-list processing-class">
+                <div class="row type-btn">
+                    <div class="col-md-12 ">
+                        <span>
+                            <a href="index.html#/depositlist">Deposit</a>
+                            <a class="active" href="index.html#/drawlist">Draw</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row orderlist-title" >
+
+                    <div class="col-md-12">
+                        <div class="col-md-2">OrderID</div>
+                        <div class="col-md-2">Time</div>
+                        <div class="col-md-1">Type</div>
+                        <div class="col-md-2">UserName</div>
+                        <div class="col-md-2">Status</div>
+                        <div class="col-md-3">Amount</div>
+                    </div>
+                </div>
+
+                <div class="row show-detail" ng-repeat="draw in drawlist">
+                    <a href="index.html#/drawlistdetial/{{draw.id}}">
+                        <div class="col-md-12">
+                            <div class="col-md-2 ">{{draw.id}}</div>
+                            <div class="col-md-2 time-font">{{draw.createAt | date:'yyyy-mm-dd'}}</div>
+                            <div class="col-md-1">Draw</div>
+                            <div class="col-md-2">{{draw.userNick}}</div>
+                            <div class="col-md-2">
+                                <span ng-if="draw.orderState==1">Create order</span>
+                                <span ng-if="draw.orderState==2">Boss orders </span>
+                                <span ng-if="draw.orderState==3">Boss to succeed</span>
+                                <span ng-if="draw.orderState==4">Order completion</span>
+                                <span ng-if="draw.orderState==5">Enter arbitration</span>
+                                <span ng-if="draw.orderState==6">Finish</span>
+                            </div>
+                            <div class="col-md-3 num-font"><i>{{draw.amount}}</i>&nbsp;&nbsp;{{draw.currency}}</div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="row show-detail" ng-repeat="draw in drawlist" ng-if="drawlist.length==0">
+                    <a href="index.html#/drawlistdetial">
+                        <div class="col-md-12">
+                            No order record
+                        </div>
+                    </a>
+
+                </div>
+
+
+                <!--<div class="row show-detail">-->
+                    <!--<a href="index.html#/orderdetail">-->
+                        <!--<div class="col-md-12">-->
+                            <!--<div class="col-md-2 ">20160428</div>-->
+                            <!--<div class="col-md-2 time-font">06-22 2016 10:22</div>-->
+                            <!--<div class="col-md-1">充值</div>-->
+                            <!--<div class="col-md-2">Agcny01</div>-->
+                            <!--<div class="col-md-2"><span>等待现金到账</span></div>-->
+                            <!--<div class="col-md-3 num-font"><i>1000</i>&nbsp;&nbsp;usd</div>-->
+                        <!--</div>-->
+                    <!--</a>-->
+
+                <!--</div>-->
+
+
+
+            </div>
+        </div>
+</div>

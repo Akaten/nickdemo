@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue指令</title>
+    <script type="text/javascript"  src="./js/vue.min.js"></script>
+</head>
+<body>
+    <div id="directivedemo">
+        <input v-focus>
+        <span style="display: none" ng-if="name">当输入框获得焦点的时候</span>
+
+
+        <div v-demo="{color :'white',text:'hello'}"></div>
+    </div>
+
+    </body>
+
+
+    <script>
+        Vue.directive('focus',function (el, binding) {
+            console.log(123);
+        })
+
+        Vue.directive('demo', function (el, binding) {
+            console.log(binding.value.color) // => "white"
+            console.log(binding.value.text)  // => "hello!"
+        })
+
+
+
+        var directivedemo=new Vue({
+            el:'#directivedemo',
+            data:{
+                name:'true'
+            }
+        })
+
+    </script>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>vue过度效果</title>
+    <script type="text/javascript" src="./js/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
+    <style>
+            .slide-fade-enter-active{
+                transition: all .3s ease;
+            }
+            .slide-fade-leave-active{
+                transtion: all .8s cubic-bezier(1.0,0.5,0.8,1.0);
+            }
+            .slide-fade-enter,.slide-fade-leave-active{
+                tarnsform: translateX(10px);
+                opacity: 0;
+            }
+            .flip-list-move {
+                transition: transform 1s;
+            }
+        div{margin-top: 60px;}
+
+        .list-complate-item{
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            display: inline-block;
+        }
+        .list-complate-enter,.list-complate-leave-active{
+            opacity: 0;
+            tarnsform: translateY(30px)
+        }
+        .list-complete-leave-active{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+        <div id="example1">
+            <button @click="show = !show">
+                Toogle render
+            </button>
+            <transition  name="slide-fade" >
+                <p v-if="show">hello</p>
+            </transition>
+        </div>
+
+
+
+        <div id="example2" class="demo">
+            <button v-on:click="shuffle">shuffle</button>
+            <transition-group name="flip-list" tag="ul">
+
+                    <li v-for="item in items" v-bind:key="item">
+                        {{item}}
+                    </li>
+
+            </transition-group>
+        </div>
+
+
+
+        <div id="example3">
+            <button v-on:click="shuffle"> shuffle</button>
+            <button v-on:click="add"> add</button>
+            <button v-on:click="remove"> remove</button>
+
+            <transition-group name="list-complete" tag="p">
+
+                <span v-for="item in items" v-bind:key="items" class="list-complate-item">
+                    {{item}}
+                </span>
+
+            </transition-group>
+        </div>
+
+</body>
+
+        <script>
+            var example1=new Vue({
+                el:'#example1',
+                data:{
+                    show: true
+                }
+                    }
+            )
+
+
+         new Vue({
+                el: '#example2',
+                data:{
+                    items:[1,2,3,4,5,6,7,8,9]
+                },
+                methods:{
+                    shuffle:function () {
+                        this.items=_.shuffle(this.items)
+                    }
+                }
+
+            })
+
+
+            new Vue({
+                el:'#example3',
+                data:{
+                    items:[1,2,3,4,5,6,7,8,9],
+                    nextNum: 10
+                },
+                methods: {
+                    randomIndex:function () {
+                        return Math.floor(Math.random() * this.items.length)
+                    },
+                    add:function () {
+                        this.items.splice(this.randomIndex(), 0,this.nextNum++)
+                    },
+                    remove:function(){
+                      this.items.splice(this.randomIndex(), 1)
+                    },
+                    shuffle:function () {
+                        this.items = _.shuffle(this.items)
+                    }
+                }
+
+            })
+
+        </script>
+</html>

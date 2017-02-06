@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>案例展示 </title>
+		<meta name="description" content="Sidebar Transitions: Transition effects for off-canvas views" />
+		<meta name="keywords" content="transition, off-canvas, navigation, effect, 3d, css3, smooth" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/pageexcess_css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/pageexcess_css/demo.css" />
+		 <link rel="stylesheet" type="text/css" href="css/pageexcess_css/icons.css" />
+		<link rel="stylesheet" type="text/css" href="css/pageexcess_css/component.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/case.css">
+		<style>
+		.top-banner {
+			z-index: 999;
+			text-align: right;
+			height: 30px !important;
+			line-height: 30px !important;
+		}
+		.top-banner a {
+			color:green !important;
+			text-shadow: none;
+		}
+		.column {
+			margin: 60px auto;
+			float: none;
+			text-align: center;
+			width: 75%;
+			min-height: 100px;
+		}
+		</style>
+		<script src="javascript/pageexcess_js/modernizr.custom.js"></script>
+        <script src="javascript/jquery-1.12.3.min.js" type="text/javascript"></script>
+        <script src="javascript/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div id="st-container" class="st-container">
+			<div class="st-pusher">
+                <nav class="st-menu st-effect-6" id="menu-2">
+                    <h2 class="icon icon-stack">BootStrap</h2>
+                    <ul>
+                        <li><a class="icon icon-data" href="index.html">Index</a></li>
+                        <li><a class="icon icon-location" href="case.html">Case</a></li>
+                        <li><a class="icon icon-study" href="login.html">login</a></li>
+                        <li><a class="icon icon-photo" href="register.html">register</a></li>
+                        <li><a class="icon icon-wallet" href="other.html">other</a></li>
+                    </ul>
+                </nav>
+
+				<div class="st-content"><!-- this is the wrapper for the content -->
+					<div class="st-content-inner"><!-- extra div for emulating position:fixed of the menu -->
+						<header class="codrops-header">
+							<h1>BootStrap Study</h1>
+						</header>
+						<div class="main clearfix">
+							<div id="st-trigger-effects" >
+
+								<button data-effect="st-effect-6" class="menue">Menue</button>
+							</div>
+						</div>
+                        <div class="container" >
+                            <div class="">
+                                <p class="text-info" style="font-size: 40px">BootStrap 栅格系统</p>
+                                <p class="text-warning" style="font-size: 20px">中等型屏幕（大于等于992px）注意单词 col-md-*</p>
+                                <div class="row">
+                                    <div class="col-md-1">.col-md-1</div>
+                                    <div class="col-md-1">.col-md-1</div>
+                                    <div class="col-md-1">.col-md-1</div>
+                                    <div class="col-md-1">.col-md-1</div>
+                                    <div class="col-md-1">.col-md-1</div>
+                                    <div class="col-md-1">.col-md-1</div>
+                                    <div class="col-md-1">.col-md-1</div>
+                                    <div class="col-md-1">.col-md-1</div>
+                                    <div class="col-md-1">.col-md-1</div>
+                                    <div class="col-md-1">.col-md-1</div>
+                                    <div class="col-md-1">.col-md-1</div>
+                                    <div class="col-md-1">.col-md-1</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-8">.col-md-8</div>
+                                    <div class="col-md-4">.col-md-4</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">.col-md-4</div>
+                                    <div class="col-md-4">.col-md-4</div>
+                                    <div class="col-md-4">.col-md-4</div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">.col-md-6</div>
+                                    <div class="col-md-6">.col-md-6</div>
+                                </div>
+
+
+                                 <p class="text-warning" style="font-size: 20px"></p>
+                                <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+                                <div class="row">
+                                    <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>
+                                    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                                </div>
+
+                                <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+                                <div class="row">
+                                    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                                    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                                    <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>
+                                </div>
+
+                                <!-- Columns are always 50% wide, on mobile and desktop -->
+                                <div class="row">
+                                    <div class="col-xs-6">.col-xs-6</div>
+                                    <div class="col-xs-6">.col-xs-6</div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="col-md-12">
+                                <p>带有鼠标移动的效果</p>
+                            </div>
+                            <div class="">
+
+                                <table class="table table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Username</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="danger">
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                    </tr>
+                                    <tr class="info">
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                    </tr>
+                                    <tr class="success">
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    <tr class="active">
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+
+
+                            <div class="col-md-12">
+                                <p>带有状态栏的输入框</p>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group has-success">
+                                    <label class="control-label" for="inputSuccess1">Input with success</label>
+                                    <input type="text" class="form-control" id="inputSuccess1">
+                                </div>
+                                <div class="form-group has-warning">
+                                    <label class="control-label" for="inputWarning1">Input with warning</label>
+                                    <input type="text" class="form-control" id="inputWarning1">
+                                </div>
+                                <div class="form-group has-error">
+                                    <label class="control-label" for="inputError1">Input with error</label>
+                                    <input type="text" class="form-control" id="inputError1">
+                                </div>
+                                <div class="has-success">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" id="checkboxSuccess" value="option1">
+                                            Checkbox with success
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="has-warning">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" id="checkboxWarning" value="option1">
+                                            Checkbox with warning
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="has-error">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" id="checkboxError" value="option1">
+                                            Checkbox with error
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-12">
+                                <p>状态按钮(有个属性可以设置按钮的大小  btn-lg(超大按钮) btn-xs(超小按钮) btn-sm(小按钮))</p>
+                            </div>
+                            <div class="col-md-12">
+                                <!-- Standard button -->
+                                <button type="button" class="btn btn-default">（默认样式）Default</button>
+
+                                <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                                <button type="button" class="btn btn-primary">（首选项）Primary</button>
+
+                                <!-- Indicates a successful or positive action -->
+                                <button type="button" class="btn btn-success">（成功）Success</button>
+
+                                <!-- Contextual button for informational alert messages -->
+                                <button type="button" class="btn btn-info">（一般信息）Info</button>
+
+                                <!-- Indicates caution should be taken with this action -->
+                                <button type="button" class="btn btn-warning">（警告）Warning</button>
+
+                                <!-- Indicates a dangerous or potentially negative action -->
+                                <button type="button" class="btn btn-danger">（危险）Danger</button>
+
+                                <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+                                <button type="button" class="btn btn-link">（链接）Link</button>
+                            </div>
+
+
+
+                            <div class="col-md-12">
+                                <p>让内容块居中</p>
+                            </div>
+                            <div class="center_class col-md-12">
+                                <div class="center-block center_small">
+                                    爸妈都半百的人了，还总是喜欢斗嘴。 老爸：“你看看你女儿长的多磕惨，倒贴都没人要！” 老妈：“切，说的好像你女儿倒贴就有人要似的！”
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="row">
+                                <p class="text-muted">...</p>
+                                <p class="text-primary">...</p>
+                                <p class="text-success">...</p>
+                                <p class="text-info">...</p>
+                                <p class="text-warning">...</p>
+                                <p class="text-danger">...</p>
+                                <div class="col-md-12" style="margin-top:60px">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="exampleInputEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">File input</label>
+                                            <input type="file" id="exampleInputFile">
+                                            <p class="help-block">Example block-level help text here.</p>
+                                        </div>
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox"> Check me out
+                                            </label>
+                                        </div>
+                                        <button type="submit" class="btn btn-default">Submit</button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <pre>
+
+
+
+
+--------------css3背景图全屏
+ background:url(images/bg33.jpg) no-repeat center center;
+ -webkit-background-size:cover;
+ -moz-background-size:cover;
+ -o-background-size:cover;
+  background-size:cover;
+
+
+
+
+------------------未知宽高居中
+body{ position: relative;}
+.neirong {
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);}
+
+
+
+
+
+
+
+----------------放在父级元素，子元素就可以居中
+居中
+  display: -webkit-box;  /* 老版本语法: Safari,  iOS, Android browser, older WebKit browsers.  */
+  display: -moz-box;    /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;  /* 混合版本语法: IE 10 */
+  display: -webkit-flex;  /* 新版本语法： Chrome 21+ */
+  display: flex;       /* 新版本语法： Opera 12.1, Firefox 22+ */
+
+/*垂直居中*/
+  /*老版本语法*/
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  /*混合版本语法*/
+  -ms-flex-align: center;
+  /*新版本语法*/
+  -webkit-align-items: center;
+  align-items: center;
+
+/*水平居中*/
+  /*老版本语法*/
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  /*混合版本语法*/
+  -ms-flex-pack: center;
+  /*新版本语法*/
+  -webkit-justify-content: center;
+  justify-content: center;
+
+
+
+
+
+
+
+----------------放在父级元素，子元素就可以居中
+swiper居中{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+/*水平居中*/
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+
+/*垂直居中*/
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+
+
+
+@font-face {
+    font-family: OPENSANS-REGULAR;
+    src: url("../font/OPENSANS-REGULAR.TTF");
+}
+
+
+
+
+<script type="text/javascript">
+    //获取列表中的原有内容
+    var content=document.getElementById("img").innerHTML;
+    //每被调用一次，就将网页原有内容添加一份，这个大家可以写自己要加载的内容或指令
+    function addLi(){
+        document.getElementById("img").innerHTML+=content;
+    }
+    /*
+     * 监听滚动条，本来不想用jQuery但是发现js里面监听滚动条的事件不好添加，这边就引用了Jquery的$(obj).scroll();这个方法了
+     */
+    $(window).scroll(function(){
+        //下面这句主要是获取网页的总高度，主要是考虑兼容性所以把Ie支持的documentElement也写了，这个方法至少支持IE8
+        var htmlHeight=document.body.scrollHeight||document.documentElement.scrollHeight;
+        //clientHeight是网页在浏览器中的可视高度，
+        var clientHeight=document.body.clientHeight||document.documentElement.clientHeight;
+        //scrollTop是浏览器滚动条的top位置，
+        var scrollTop=document.body.scrollTop||document.documentElement.scrollTop;
+        //通过判断滚动条的top位置与可视网页之和与整个网页的高度是否相等来决定是否加载内容；
+        if(scrollTop+clientHeight==htmlHeight){
+            addLi();
+        }
+    })
+</script>
+
+
+
+/*初始化html5新标签*/
+article,aside,dialog,footer,header,section,footer,nav,figure,menu{display:block}
+
+
+
+multiple 属性规定<input> 元素中可选择多个值（上传多个文件）
+
+
+
+
+-------------------輸入框默認值，輸入消失
+<input class="aaa" name="" type="text" placeholder="請輸入職位/公司名" />
+
+.aaa{ font-size: 20px; line-height: 28px; color: #f0ad4e;}
+.aaa::-webkit-input-placeholder{ color:#ff0000}
+.aaa:-moz-placeholder {  color:#ff0000/* Mozilla Firefox 4 to 18 */}
+.aaa::-moz-placeholder { color:#ff0000; /* Mozilla Firefox 19+ */}
+.aaa:-ms-input-placeholder {  color:#ff0000;/* Internet Explorer 10+ */}
+
+
+
+--------------------单行文本溢出
+.xx{
+overflow:hidden;
+white-space:nowrap;
+text-overflow:ellipsis;//溢出显示省略号
+}
+
+
+
+
+
+
+多行文本溢出
+.xx{
+display:-webkit-box !importmort;
+overflow:hidden;
+text-overflow:ellipsis;
+word-break:break-all;
+-webkit-box-orient:vertical;
+-webkit-line-clamp:2;(数字2表示隐藏两行)
+}
+
+
+---------------屏幕宽高
+document.documentElement.clientHeight;
+document.documentElement.clientWidth;
+
+
+
+
+当前不处于加载中   #scrollToFoot为页面的最底部元素ID
+ $("#scrollToFoot").innerHTML !== "加载中~~~"
+
+
+
+
+
+
+
+视频宽高100%设置
+width: 100%;height: 100%;object-fit: cover;object-position: 100% 100%;
+
+
+
+
+
+
+*{ margin:0; padding:0;}
+a:link,a:visited,a:hover,a:active{ color:inherit; text-decoration:none;}
+li{ list-style:none;}
+
+
+
+
+
+
+body{background:blue;}/*宽度500px-800px之间+高度100px-400px之间 蓝色*/
+@media screen and (max-width:500px){body{background:green;}}/*宽度小于500px时 绿色*/
+@media screen and (min-width:800px){body{background:red;}}/*宽度大于800px时 红色*/
+@media screen and (max-height:100px){body{background:yellow;}}/*高度小于100px时 黄色*/
+@media screen and (min-height:400px){body{background:pink;}}/*高度大于400px时 粉色*/
+
+
+
+
+
+a:link {color: #000;} /* 未访问的链接 */
+a:visited {color: #F00;} /* 已访问的链接 */
+a:hover{color: #0F0;} /* 鼠标在链接上 */
+a:active {color: #00F;} /* 点击激活链接 */
+
+
+
+
+
+--------手機網站
+<meta content="width=device-width, initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport" />
+<meta name="MobileOptimized" content="240" />
+<meta hbottom_bgp-equiv="Expires" content="0" />
+<meta hbottom_bgp-equiv="Cache-Control" content="no-cache" />
+<meta hbottom_bgp-equiv="Pragma" content="no-cache" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=yes" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+<link href="style/index.css?id=254" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jquery/jquery-1.7.2.min.js"></script>
+
+
+
+
+----------不用a標籤  點擊鏈接
+onclick='window.location.href="http://6swx.com/views/5402"'
+
+------------超鏈接
+wb_link="about.html"
+
+
+
+
+$("tr:even")	选取偶数位置的 <tr> 元素
+$("tr:odd")	选取奇数位置的 <tr> 元素
+
+
+
+
+
+
+http://www.radar2myr.com/
+http://www.radar2jpy.com/
+
+qits.com
+
+https://alchemybean.com/index.html
+
+
+http://pi888.pi-group.biz/pake_group/html/index.html
+
+games.pi-group.biz
+sex.pi-group.biz
+entertainment.pi-group.biz
+finance.pi-group.biz
+sports.pi-group.biz
+pictures.pi-group.biz
+
+
+风投
+http://vcmatrix.com/index.html
+
+http://www.pktgi.com/
+
+http://www.yi-shopping.com/mobile/index.html#/index
+
+
+
+
+
+
+------------------------------上传图片
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>#pic{
+        width:100px;
+        height:100px;
+        border-radius:50% ;
+        margin:20px auto;
+        cursor: pointer;
+    }</style>
+</head>
+<body>
+
+<img id="pic" src="" >
+<input  id="upload" name="file" accept="image/*" type="file" style="display: none"/>
+
+<script src="./lib/js/jquery-1.12.3.min.js" type="text/javascript"></script>
+<script>
+    $(function() {
+        $("#pic").click(function () {
+            $("#upload").click();               //隐藏了input:file样式后，点击头像就可以本地上传
+            $("#upload").on("change",function(){
+                var objUrl = getObjectURL(this.files[0]) ;  //获取图片的路径，该路径不是图片在本地的路径
+                if (objUrl) {
+                    $("#pic").attr("src", objUrl) ;      //将图片路径存入src中，显示出图片
+                }
+            });
+        });
+    });
+    //建立一個可存取到該file的url
+    function getObjectURL(file) {
+        var url = null ;
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }
+</script>
+</body>
+</html>
+
+
+
+                        </pre>
+
+
+                        </div>
+
+
+
+						<div class="footer-banner" style="width:728px; margin:160px auto 0"></div>
+					</div><!-- /st-content-inner -->
+				</div><!-- /st-content -->
+			</div><!-- /st-pusher -->
+		</div>
+
+        
+
+		<script src="javascript/pageexcess_js/classie.js"></script>
+		<script src="javascript/pageexcess_js/sidebarEffects.js"></script>
+	</body>
+</html>

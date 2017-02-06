@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html  ng-app="qhWeb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <script type="text/javascript" src="./lib/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="./lib/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="./lib/angular.min.js"></script>
+    <script type="text/javascript" src="./lib/angular-route.min.js"></script>
+    <script type="text/javascript" src="./lib/angular-translate.min.js"></script>
+    <script type="text/javascript" src="./lib/angular-translate-handler-log.min.js"></script>
+    <script type="text/javascript" src="./lib/angular-translate-loader-static-files.min.js"></script>
+    <script type="text/javascript" src="./lib/swiper.min.js"></script>
+    <script type="text/javascript" src="./lib/util.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+
+    <title>index</title>
+</head>
+<body ng-controller="langCtrl">
+    <div ng-include="'./html/header.html'"></div>
+        <div ng-view></div>
+
+    <div ng-include="'./html/footer.html'"></div>
+</body>
+</html>

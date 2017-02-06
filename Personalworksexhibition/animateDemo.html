@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width:device-width,initial-scale=1">
+    <title>animateDemo</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+
+    <style>
+        nav{background: transparent !important;border-color: transparent !important;}
+        .container_class{background: tomato;height: 1900px; width:100%;}
+        .container_class .font_class{font-size: 40px;color: #fff;display: inline-block;text-decoration: none;cursor: pointer;
+            width: 600px;text-align: center;height: 120px;background-color: chocolate;border-radius: 15px;line-height: 120px;
+            position: absolute;top: 50%;margin-top: -60px;left: 50%;margin-left: -300px;transition: background .5s ease}
+
+        .container_class .font_class:hover{background-color: #f0ad4e;}
+        .navbar-brand{padding:8px 0px;}
+        .navbar-nav li a{color: #000 !important;}
+        #header_id{display: none}
+        .logo{height: 35px;width: 120px;}
+
+
+
+
+    </style>
+</head>
+<body >
+<header>
+
+    <nav class="navbar navbar-default navbar-fixed-top scrolled" role="navigation" id="header_id_one">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="fa fa-bars fa-lg"></span>
+                </button>
+                <a indepth="true" class="navbar-brand" href="index.html">
+                    <img src="./img/logo.png" alt="" class="logo" width="200">
+                </a>
+            </div>
+
+
+            <div class="collapse navbar-collapse" >
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">about</a>
+                    </li>
+                    <li><a href="#features">features</a>
+                    </li>
+                    <li><a class="getApp" href="#getApp">get it now</a>
+                    </li>
+                    <li><a><i class="fa fa-desktop"></i> dashboard</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+    </nav>
+
+
+    <div class="navbar navbar-default navbar-fixed-top scrolled" role="navigation" id="header_id">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="fa fa-bars fa-lg"></span>
+                </button>
+                <a indepth="true" class="navbar-brand" href="index.html">
+                    <img src="./img/logo.png" alt="" class="logo" width="200">
+                </a>
+            </div>
+
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#about">about</a>
+                    </li>
+                    <li><a href="#features">features</a>
+                    </li>
+                    <li><a class="getApp" href="#getApp">get it now</a>
+                    </li>
+                    <li><a><i class="fa fa-desktop"></i> dashboard</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+</header>
+
+
+<div class="container_class">
+        <div class="container">
+            <a class="font_class">Hello World</a>
+        </div>
+</div>
+</body>
+    <script type="text/javascript" src="./javascript/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="./javascript/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        $(window).scroll(function () {
+
+            //获取网页的总高度
+            var htmlHeight=document.body.scrollHeight ||document.documentElement.scrollHeight;
+            //获取网页在浏览器中的可视高度
+            var clientHeight=document.body.clientHeight ||document.documentElement.clientHeight;
+            //scroll浏览器滚动条的top位置
+            var scrollTop=document.body.scrollTop || document.documentElement.scrollTop;
+
+            if(scrollTop>60){
+                $("#header_id").css("display","block");
+                $("#header_id_one").css("display","none");
+            }
+            if(scrollTop<60){
+                $("#header_id").css("display","none");
+                $("#header_id_one").css("display","block");
+            }
+
+        });
+    </script>
+</html>

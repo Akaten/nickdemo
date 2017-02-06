@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vueRoute学习</title>
+    <script type="text/javascript" src="../js/vue.min.js"></script>
+    <script type="text/javascript" src="../js/vue-route.js"></script>
+</head>
+<body>
+        <div id="app">
+            <p>  <router-link to="/foo">页面跳转1</router-link></p>
+            <p>  <router-link to="/foo1">页面跳转2</router-link></p>
+            <p> <router-link to="/foo2">页面跳转3</router-link></p>
+
+            <div style="background: bisque;height: 400px;width: 200px">
+            <router-view></router-view>
+            </div>
+        </div>
+
+
+</body>
+
+    <script>
+        import "./vue/demo.vue"
+        import "./vue/demo1.vue"
+        import "./vue/demo2.vue"
+//        const Foo={template:'<div>123123123</div>'}
+//        const Foo1={template:'<div>5666666</div>'}
+//        const Foo2={template:'<div>888888888</div>'}
+
+
+        const routes=[
+            {path:'/foo',component:Foo},
+            {path:'/foo1',component:Foo1},
+            {path:'/foo2',component:Foo2}
+        ]
+
+        const router=new VueRouter({
+            routes
+        })
+
+        const app=new Vue({
+            router
+        }).$mount('#app')
+    </script>
+</html>

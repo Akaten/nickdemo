@@ -1,0 +1,61 @@
+<div class="container order-index">
+        <div class="col-md-12 order-title"></div>
+
+        <div class="row">
+            <div class="col-md-2 col-xs-12 list-div">
+                <ul>
+                    <li><a class="active" href="index.html#/depositlist">Share transaction</a></li>
+                    <li><a class="second-font" ng-click="searchDepositstatefun(2)">In treatment</a></li>
+                    <li><a class="second-font" ng-click="searchDepositstatefun(1)">Finish</a></li>
+                    <li><a href="index.html#/updaterate">Update information</a></li>
+                    <li><a class="second-font">DepositRate:<i>{{bossdata.depositRate}}%</i></a></li>
+                    <li><a class="second-font">DrawRate:<i>{{bossdata.drawRate}}%</i></a></li>
+                </ul>
+            </div>
+            <div class="col-md-10 order-list processing-class col-xs-12">
+                <div class="row type-btn">
+                    <div class="col-md-12 ">
+                        <span>
+                            <a class="active" href="index.html#/depositlist">Deposit</a>
+                            <a href="index.html#/drawlist">Draw</a>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row orderlist-title" >
+
+                    <div class="col-md-12">
+                        <div class="col-md-2">OrderID</div>
+                        <div class="col-md-2">Time</div>
+                        <div class="col-md-1">Type</div>
+                        <div class="col-md-2">Username</div>
+                        <div class="col-md-2">Status</div>
+                        <div class="col-md-3">Amount</div>
+                    </div>
+                </div>
+
+                <div class="row show-detail" ng-repeat="deposit in depositlist">
+                    <a href="index.html#/depositdetial/{{deposit.id}}">
+                        <div class="col-md-12">
+                            <div class="col-md-2 ">{{deposit.id}}</div>
+                            <div class="col-md-2 time-font">{{deposit.createAt | date: 'yyyy-mm-dd'}}</div>
+                            <div class="col-md-1">Deposit</div>
+                            <div class="col-md-2">{{deposit.userNick}}</div>
+                            <div class="col-md-2">
+                                <span ng-if="deposit.orderState==1">Create order </span>
+                                <span ng-if="deposit.orderState==2">Boss orders </span>
+                                <span ng-if="deposit.orderState==3">Boss to succeed</span>
+                                <span ng-if="deposit.orderState==4">Order completion</span>
+                                <span ng-if="deposit.orderState==5">Enter arbitration</span>
+                                <span ng-if="deposit.orderState==6">Finish</span>
+                            </div>
+                            <div class="col-md-3 num-font"><i>{{deposit.amount}}</i>&nbsp;&nbsp;{{deposit.currency}}</div>
+                        </div>
+                    </a>
+
+                </div>
+
+
+            </div>
+        </div>
+</div>

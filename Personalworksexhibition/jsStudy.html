@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsStudy</title>
+
+    <script type="text/javascript">
+        function Foo() {
+                getName=function(){
+                    console.log(1);
+                    return this;
+                }
+        }
+
+        Foo.getName = function(){
+            console.log(2)
+        }
+
+        Foo.prototype.getName=function () {
+            console.log(3)
+        }
+
+        var getName=function () {
+            console.log(4);
+        }
+
+        function getName(){
+            console.log(5)
+        }
+
+        //这个只是相当于普通的方法调用
+        Foo.getName();
+
+        //也是相当于执行这个方法
+        getName();
+
+        new Foo.getName();
+
+            new Foo().getName();
+
+
+        new  new Foo().getName();
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue 混合 学习</title>
+    <script type="text/javascript" src="./js/vue.min.js"></script>
+</head>
+<body>
+        <div id="mixin">
+            混合对象里面有关键字  created  mixins
+        </div>
+
+</body>
+
+    <script>
+        var mixin={
+            created:function(){
+                console.log('混合对象的钩子别调用')
+            }
+        }
+
+        var mixin=new  Vue({
+                    el:'#mixin',
+                    mixins:[mixin],
+                    created:function () {
+                        console.log('组建钩子别调用')
+                    }
+                })
+
+
+
+            var mixin={
+                    methods:{
+                        foo:function () {
+                            console.log('foo')
+                        },
+                        conflicting:function () {
+                            console.log('from mixin')
+                        }
+                    }
+            }
+
+
+                var vm =new Vue({
+                    mixins:[mixin],
+                    methods:{
+                        bar:function () {
+                            console.log('bar')
+                        },
+                        conflicting:function () {
+                            console.log('from self')
+                        }
+                    }
+                })
+
+
+            vm.foo();
+            vm.bar();
+        vm.conflicting();
+    </script>
+</html>

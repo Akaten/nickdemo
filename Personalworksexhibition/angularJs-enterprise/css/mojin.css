@@ -1,0 +1,118 @@
+.login-contect{width: 600px;height: 400px;position: absolute;top: 50%;margin-top: -200px;left: 50%;margin-left: -300px;text-align: center}
+.login-contect .form-group{line-height: 35px;height: 35px;margin-top: 30px;}
+.login-contect a{margin-top: 30px;width: 20%;color: #5bc0de}
+.login-contect .form-group .col-md-4{line-height: 40px;}
+.login-contect .login-title{font-size: 64px;color:#5bc0de;padding-bottom: 50px;margin-left: 54px;}
+.login-contect .form-group label{font-style: normal !important;color:#5bc0de}
+.order-index ul{list-style: none;height: 40px;line-height: 40px;padding: 0px !important;}
+.order-index .order-list{text-align: center;background: #f7f7f7; padding: 30px;border-radius: 5px;box-shadow: 1px 1px 6px;}
+.order-index .order-title{text-align: center;font-size: 64px;color:#333;margin-bottom: 50px;margin-top: 50px; }
+.order-index ul li a{font-size: 16px;color: #000;text-decoration: none;cursor: pointer}
+.order-index ul li .second-font{font-size: 12px !important;color: #000;text-decoration: none;cursor: pointer}
+.order-index ul li a.active{color:#FDD878; font-size: 18px;}
+.order-index .col-md-2{padding: 0px;}
+.order-index ul li i{color: #5bc0de;font-style: normal;font-size: 14px;}
+.order-index .show-detail:hover{background: #DADADA;cursor: pointer;}
+.order-index{background: #fff;padding-bottom: 50px;}
+.order-index .type-btn{margin-bottom: 60px;}
+.order-index .type-btn span{display: inline-block;border: 1px solid #5bc0de;}
+.order-index .type-btn a{font-size: 18px;display: inline-block;cursor: pointer;width: 100px;text-align: center;text-decoration: none;color: #333; }
+.order-index .type-btn a.active{background: #5bc0de;color: #fff;}
+.order-index .orderlist-title{font-size: 16px;padding-bottom: 20px;height: 60px;line-height: 60px;background: #5bc0de; color: #fff;}
+.order-index .show-detail{height: 60px;line-height: 60px;border: 1px solid grey;margin-top: 20px}
+.order-index .show-detail .col-md-2 span{color: #edc239}
+.order-index .show-detail .time-font{color: #A7A7AA}
+.order-index .show-detail .num-font i{font-style: normal;font-size: 16px;color: #000;}
+.order-index .show-detail a{color: #333;}
+.update-rate{margin-top: 100px;}
+.update-rate ul{list-style: none;height: 40px;line-height: 40px;padding: 0px !important;}
+.update-rate .order-list{text-align: center; }
+.update-rate .order-title{text-align: center;font-size: 64px;color:#333;margin-bottom: 50px;margin-top: 50px; }
+.update-rate ul li a{font-size: 16px;color: #000;text-decoration: none;cursor: pointer}
+.update-rate ul li a.active{color:#FDD878; font-size: 18px;}
+.update-rate .col-md-2{padding: 0px;}
+.update-rate ul li i{color: #5bc0de;font-style: normal;font-size: 12px;}
+.update-rate ul li .second-font{font-size: 12px !important;color: #000;text-decoration: none;cursor: pointer}
+.update-rate .col-md-12{padding: 0px;height: 50px;line-height: 50px;}
+.update-rate .check-class{position: relative}
+.update-rate .form-group{margin-top: 20px;}
+.col-sm-2{padding: 0px;font-weight: bold}
+.update-rate .contect-input{margin-top: 20px;}
+.update-rate .btn-class{text-align: center;margin-top: 40px}
+.update-rate .form-group .col-sm-2{height: 34px;line-height: 34px;font-weight: bold}
+.update-rate .btn-class a:hover{background:#5bc0de;color: #fff;border: none; }
+.update-rate .right-box{border: 1px solid #ededed; padding: 30px; border-radius: 5px;box-shadow: 0px 1px 6px;}
+.orderdetail{margin-top: 100px;}
+.orderdetail ul{list-style: none;height: 40px;line-height: 40px;padding: 0px !important;}
+.orderdetail .order-list{text-align: center}
+.orderdetail .order-title{text-align: center;font-size: 64px;color:#333;margin-bottom: 50px;margin-top: 50px; }
+.orderdetail ul li a{font-size: 16px;color: #000;text-decoration: none;cursor: pointer}
+.orderdetail ul li a.active{color:#FDD878; font-size: 18px;}
+.orderdetail .col-md-2{padding: 0px;}
+.orderdetail ul li i{color: #5bc0de;font-style: normal;font-size: 12px;}
+.orderdetail ul li .second-font{font-size: 12px !important;color: #000;text-decoration: none;cursor: pointer}
+
+.update-rate .choicecss{padding: 0px;}
+/*.update-rate .choicecss span{position: relative;top: -10px;width: 200px;}*/
+.update-rate .choicecss em{font-style: normal;padding: 0px 10px;}
+.orderdetail i{font-style: normal;}
+.orderdetail .step-class{text-align: center}
+.orderdetail .step-font{text-align: center;}
+.orderdetail .left-font{text-align: left}
+.orderdetail .right-font{text-align: right}
+.orderdetail .step-class .col-md-2 i{display: inline-block;width: 20px;height: 20px;border-radius: 100%;text-align: center;border: 1px solid #FDD878}
+.orderdetail .step-class .col-md-2 i.active{display: inline-block;width: 20px;height: 20px;border-radius: 100%;background: #FDD878;text-align: center;color: #fff;}
+.orderdetail .step-class:after{position: absolute;border: 1px solid #FDD878;z-index: 11;width: 100%;left: 50%;}
+.orderdetail .step-class{margin-top: 60px;}
+
+.orderdetail .step-class .steps { position: relative; margin-bottom: 30px;  counter-reset: step;  /*创建步骤数字计数器*/}
+/*步骤描述*/
+.orderdetail .step-class  .steps li {    list-style-type: none;    font-size: 12px;    text-align: center;    width: 16%;    position: relative;    float: left;}
+
+/*步骤数字*/
+.orderdetail .step-class  .steps li:before {
+    display: block;    content: counter(step); /*设定计数器内容*/
+    counter-increment: step;  /*计数器值递增*/    width: 32px;    height: 32px;    background-color: #777;    line-height: 32px;    border-radius: 32px;    font-size: 16px;    color: #fff;    text-align: center;    font-weight: 700;    margin: 0 auto 8px auto;}
+
+/*连接线*/
+.orderdetail .steps li ~ li:after {
+    content: '';    width: 100%;    height: 2px;    background-color: #777;
+    position: absolute;    left: -50%;    top: 15px;    z-index: -1; /*放置在数字后面*/
+}
+
+.orderdetail .step-class  .steps li.active:before{background-color:#5bc0de}
+.orderdetail .steps li ~ li:after{background-color:#5bc0de}
+
+
+/*!*将当前/完成步骤之前的数字及连接线变绿*!*/
+/*.orderdetail .steps li.active:before,.orderdetail .steps li.active:after {    background-color: #5bc0de;}*/
+
+/*!*将当前/完成步骤之后的数字及连接线变灰*!*/
+/*.orderdetail .steps li.active ~ li:before,.orderdetail.steps li.active ~ li:after {    background-color: #777;}*/
+
+.orderdetail .detail-box{border: 1px solid #f7f7f7;border-radius: 5px;    padding: 20px;box-shadow:1px 1px 10px;}
+.orderdetail .top-font{height: 60px;line-height: 60px;}
+.orderdetail .step-font{margin-bottom: 60px;}
+.orderdetail .pull-right a{margin-right: 60px;}
+.orderdetail .pull-right{padding-bottom: 40px;}
+
+footer{text-align: center;width: 100%;height: 50px;border-top: 1px solid #333;line-height: 50px;position: fixed;background: #fff;bottom: 0px}
+header{height: 80px;line-height: 80px;background-color: #5bc0de;}
+header a{cursor: pointer;text-decoration: none !important;color: #fff;}
+header .uname{margin-right: 30px;}
+header .col-md-4{font-size: 40px;}
+header .container{padding: 0px;}
+header .col-md-8{padding: 0px;}
+.list-div{height: 300px;}
+.stepclass{display: none}
+
+@media screen and (max-width: 414px) {
+    footer{position: relative}
+    .order-index .orderlist-title{height: auto}
+    .order-index .show-detail{height: auto}
+    .orderdetail .pull-right a{margin-right: auto}
+    .orderdetail .col-md-2{padding: 0px 15px}
+    .order-index .col-md-2{padding: 0px 15px}
+    .update-rate .col-md-2{padding: 0px 15px}
+
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件学习</title>
+    <script type="text/javascript" src="./js/vue.min.js"></script>
+</head>
+<body>
+
+<div id="demo1">
+    <simple-counter></simple-counter>
+    <simple-counter></simple-counter>
+    <simple-counter></simple-counter>
+</div>
+</body>
+
+<script>
+
+        var data={counter:0}
+        Vue.component('simple-counter',{
+            template:'<button v-on:click="counter+=1">{{counter}}</button>',
+            data:function () {
+                return {
+                    counter:0
+                }
+            }
+        })
+
+        var  demo1=new Vue({
+                    el:'#demo1'
+                }
+        )
+
+</script>
+</html>

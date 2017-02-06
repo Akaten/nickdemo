@@ -1,0 +1,77 @@
+<div class="container orderdetail">
+        <div class="row">
+            <div class="col-md-2 list-div">
+
+                <ul>
+                    <li><a class="active" href="index.html#/depositlist">Share transaction</a></li>
+                    <li><a class="second-font" href="index.html#/drawlist">In treatment</a></li>
+                    <li><a class="second-font" href="index.html#/drawlist">Finish</a></li>
+                    <li><a href="index.html#/updaterate">Update information</a></li>
+                    <li><a class="second-font">Depositrate:<i>{{bossdata.depositRate}}%</i></a></li>
+                    <li><a class="second-font">Drawrate:<i>{{bossdata.drawRate}}%</i></a></li>
+                </ul>
+
+            </div>
+            <div class="col-md-10 detail-box">
+                <div class="row top-font">
+                    <div class="col-md-6">
+                        <p class="order-font">OrderID:<i>{{drawdetial.id}}</i></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="time-font">time:{{drawdetial.createAt |date :'yyyy-mm-dd hh:ss'}}</p>
+                    </div>
+                </div>
+
+
+                <div class="row top-font">
+                    <div class="col-md-6">
+                        <p>UserName:{{drawdetial.userNick}}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Order amount:{{drawdetial.amount}} <i>{{drawdetial.currency}}</i></p>
+                    </div>
+                </div>
+
+                <div class="row step-font">
+                        <div class="col-md-12 step-class">
+                            <ul class="steps" ng-if="drawdetial.orderState!=6">
+                                <li  ng-repeat="step in steplist"   class="active" ng-show="step.finish" ng-if="steplist.length<=6">{{step.msg}}</li>
+                                <li  ng-repeat="step in steplist"   ng-show="!step.finish" ng-if="steplist.length<=6">{{step.msg}}</li>
+
+
+                                <div  ng-show="step.finish"  ng-if="steplist.length>6" style="font-size: 24px;color: #f0ad4e">The operation, please operate in app <p><button ng-click="downapp()">app down</button></p></div>
+                                <div  ng-show="!step.finish"   ng-if="steplist.length>6" ><span style="font-size: 24px;color: #f0ad4e">The operation, please operate in app </span><p><button class="btn btn-success" ng-click="downapp()">app down</button></p></div>
+
+                            </ul>
+                            <ul class="steps" ng-if="drawdetial.orderState==6">
+                                <span style="font-size: 24px;color: #f0ad4e">
+                                    Order has been cancelled
+                                </span>
+                            </ul>
+                        </div>
+                        </p>
+                </div>
+
+
+                <div class="row">
+                    <div class="pull-right">
+                        <div class="step2">
+                        </div>
+                        <div class="step1 stepclass"></div>
+                        <div class="step2 stepclass" ng-if="drawdetial.orderState!=6">
+                            <a class="btn btn-default  " ng-click="confirmsaveOrderdraw()">Confirmation of orders</a>
+                            <a class="btn btn-default  " ng-click="confirmfailOrderdraw()">Reject the order</a>
+                        </div>
+                        <div class="step3 stepclass">
+                            <a class="btn btn-default" ng-click="confirmOrderdraw()">Confirmation of payment</a>
+                        </div>
+                        <div class="step4 stepclass">
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</div>
